@@ -32,7 +32,6 @@
     </div>
 </div>
 <br clear="all">
-<br clear="all">
 
 ```python
 # hello.py
