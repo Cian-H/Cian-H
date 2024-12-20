@@ -1,5 +1,5 @@
 <div>
-    <img src="https://media.tenor.com/0ygiqFaX-ssAAAAC/bongo-cat-typing.gif" height="224px" align="right" />
+    <img src="https://media.tenor.com/0ygiqFaX-ssAAAAC/bongo-cat-typing.gif" height="240px" align="right" />
     <div>
         <div align="left">
             <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Cian-H&locale=en&hide_title=false&layout=donut&card_width=320&hide=nushell,jupyter%20notebook&theme=github_dark&hide_border=true&order=2"
