@@ -34,6 +34,7 @@
 <br clear="all">
 
 ```python
+#!/usr/bin/env python
 # hello.py
 
 def main() -> None:
@@ -45,7 +46,7 @@ if __name__ == "__main__":
 ```
 
 ```nu
-> python hello.py
+> ./hello.py
 ```
 
 # 👋 Hello, other programmers!
