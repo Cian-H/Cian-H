@@ -1,35 +1,5 @@
-<div>
-    <img src="./github-metrics.svg" width=100% alt="metrics"/>
-    <img src="https://media.tenor.com/0ygiqFaX-ssAAAAC/bongo-cat-typing.gif" height="240px" align="right" />
-    <div>
-        <div align="left">
-            <div>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="52"
-                    alt="python logo" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" height="52"
-                    alt="rust logo" />
-            </div>
-            <div>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/julia/julia-original.svg" height="52"
-                    alt="julia logo" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg" height="52"
-                    alt="elixir logo" />
-            </div>
-            <div>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" height="52"
-                    alt="numpy logo" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" height="52"
-                    alt="pandas logo" />
-            </div>
-            <div>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" height="52"
-                    alt="pytorch logo" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nixos/nixos-original.svg" height="52"
-                    alt="nixos logo" />
-            </div>
-        </div>
-    </div>
-</div>
+<img src="./github-metrics.svg" width=100% alt="metrics"/>
+<img src="./subheader.svg" width=100% alt="subheader"/>
 <br clear="all">
 
 ```python
