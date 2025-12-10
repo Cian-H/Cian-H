@@ -1,0 +1,48 @@
+name: Subheader SVG Builder
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/build_subheader.py"
+      - "templates/subheader.svg.j2"
+
+jobs:
+  build-svg:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install Dependencies
+        run: |
+          pip install requests jinja2
+
+      - name: Generate SVG
+        run: |
+          python scripts/build_subheader.py
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [[ -n $(git status -s) ]]; then
+            git add header.svg
+            git commit -m "Subheader SVG Builder: Updated subheader.svg"
+            git push
+          else
+            echo "No changes to commit."
+          fi
