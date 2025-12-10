@@ -40,7 +40,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
           if [[ -n $(git status -s) ]]; then
-            git add header.svg
+            git add subheader.svg
             git commit -m "Subheader SVG Builder: Updated subheader.svg"
             git push
           else
