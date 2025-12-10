@@ -19,14 +19,12 @@
       .mobile { display: block; }
     }
   </style>
-
   <g class="desktop">
-    <image href="{{ python }}" x="0" y="40" height="40" width="40"/>
-    <image href="{{ rust }}" x="50" y="40" height="40" width="40"/>
-    <image href="{{ julia }}" x="0" y="90" height="40" width="40"/>
-    <image href="{{ elixir }}" x="50" y="90" height="40" width="40"/>
-    <image href="{{ numpy }}" x="0" y="140" height="40" width="40"/>
-    <image href="{{ pandas }}" x="50" y="140" height="40" width="40"/>
+    {% for icon in icons %}
+      {% set col = loop.index0 % 2 %}
+      {% set row = (loop.index0 / 2) | int %}
+      <image href="{{ icon }}" x="{{ col * 50 }}" y="{{ 40 + (row * 50) }}" width="40" height="40" />
+    {% endfor %}
 
     <text x="350" y="110" text-anchor="middle">Whitespace is important...</text>
 

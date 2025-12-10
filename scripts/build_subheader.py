@@ -3,6 +3,7 @@ from jinja2 import Template
 from pathlib import Path
 import mimetypes
 import requests
+from typing import Any
 
 
 SCRIPT_DIR = Path(__file__).parent
@@ -10,7 +11,7 @@ REPO_ROOT = SCRIPT_DIR.parent
 TEMPLATE_PATH = REPO_ROOT / "templates/subheader.svg.j2"
 OUTPUT_PATH = REPO_ROOT / "subheader.svg"
 
-IMAGE_URL_MAP: dict[str, str] = {
+IMAGE_URL_MAP: dict[str, Any] = {
     "python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     "rust": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg",
     "julia": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/julia/julia-original.svg",
@@ -21,6 +22,7 @@ IMAGE_URL_MAP: dict[str, str] = {
     "nixos": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nixos/nixos-original.svg",
     "bongo": "https://media.tenor.com/0ygiqFaX-ssAAAAC/bongo-cat-typing.gif"
 }
+ICONS: list[str] = ["python", "rust", "julia", "elixir", "numpy", "pandas", "pytorch", "nixos"]
 
 
 def get_base64_from_url(url: str) -> str:
@@ -59,6 +61,7 @@ def build_svg(filepath: Path, template_filepath: Path, token_map: dict[str, str]
 
 def main():
     token_map = fetch_images_from_url_values(IMAGE_URL_MAP)
+    token_map["icons"] = [v for k, v in token_map.items() if k in ICONS]
     build_svg(OUTPUT_PATH, TEMPLATE_PATH, token_map)
     print(f"Finished building {OUTPUT_PATH}")
 
